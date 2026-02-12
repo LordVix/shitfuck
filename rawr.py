@@ -3,11 +3,11 @@ import os as bigdawg
 import time as tdawg
 
 
-class fuckingHiraganaQuiz():
+class fuckingHiraganaQuiz:
 
-    def __init__(self):
+    def __init__(balls):
 
-        self.hiragana = {
+        balls.hiragana = {
             "あ": "a",   "い": "i",   "う": "u",   "え": "e",   "お": "o",
             "か": "ka",  "き": "ki",  "く": "ku",  "け": "ke",  "こ": "ko",
             "さ": "sa",  "し": "shi", "す": "su",  "せ": "se",  "そ": "so",
@@ -20,34 +20,33 @@ class fuckingHiraganaQuiz():
             "わ": "wa",  "を": "wo",  "ん": "n"
             }
         
-        self.bigdawg = bigdawg
         #################---- colors nd shiii---#########
-        self.BLINKERINO = "\033[5m" ################## fuck this shit ive been trying for a bit and idc to fix it might be my term idfk im going to sleep 
+        balls.BLINKERINO = "\033[5m" ################## fuck this shit ive been trying for a bit and idc to fix it might be my term idfk im going to sleep 
         ####basic ass colors shit fuck im so sleepy rn 
-        self.GREEN = "\033[92m"  # correct
-        self.RED   = "\033[91m"  # incorrect
-        self.RESET = "\033[0m"   # default
+        balls.GREEN = "\033[92m"  # correct
+        balls.RED   = "\033[91m"  # incorrect
+        balls.RESET = "\033[0m"   # default
 
 
-    def WIPE_THE_TERMINAL_ITS_EVIL_AS_FUCK(self): ###### if u dont the terminal can gain sentience and kill u in ur sleep
+    def WIPE_THE_TERMINAL_ITS_EVIL_AS_FUCK(balls): ###### if u dont the terminal can gain sentience and kill u in ur sleep
 
-        self.bigdawg.system('cls')
+        bigdawg.system('cls') ######## im not making it usable for linux and mac idc if its 2 lines fuck them
 
 
-    def looperino(self): #### heart of everything fr fr folknemskirino
+    def looperino(balls): #### heart of everything fr fr folknemskirino
         while True:
-            self.WIPE_THE_TERMINAL_ITS_EVIL_AS_FUCK() #### windows superiority everything else inferiority (said no one ever)
+            balls.WIPE_THE_TERMINAL_ITS_EVIL_AS_FUCK() #### windows superiority everything else inferiority (said no one ever)
 
-            randomLetterBullshit = r.choice(list(self.hiragana.keys()))
+            randomLetterBullshit = r.choice(list(balls.hiragana))
 
-            guess = input(f"hey fuck u nerd whats this shit in romaji {randomLetterBullshit} nerd \n")
+            guess = input(f"hey fuck u nerd whats this shit in romaji {randomLetterBullshit} nerd \n").lower().strip()
 
-            correcterino = self.hiragana[randomLetterBullshit]
+            correcterino = balls.hiragana[randomLetterBullshit]
 
             if guess == correcterino:
-                print (f"{self.BLINKERINO}{self.GREEN}WELL DONE IDIOTTTT fuckin otaku nerd {self.RESET} \n") ####### RESET OR UR TERMINAL BLOWS UP
+                print (f"{balls.BLINKERINO}{balls.GREEN}WELL DONE IDIOTTTT fuckin otaku nerd {balls.RESET} \n") ####### RESET OR UR TERMINAL BLOWS UP
             else:
-                print (f"{self.RED}fucking dumbass im gnna beat ur ass {self.RESET} \nthe answer was actually {self.GREEN} {correcterino} {self.RESET} dumbasssssss") ####### RESET OR UR TERMINAL BLOWS UP 
+                print (f"{balls.RED}fucking dumbass im gnna beat ur ass {balls.RESET} \nthe answer was actually {balls.GREEN} {correcterino} {balls.RESET} dumbasssssss") ####### RESET OR UR TERMINAL BLOWS UP 
             while True:
                 replay =  input("\nagain? y/n ").lower().strip()
                 if replay == "y":
@@ -58,6 +57,6 @@ class fuckingHiraganaQuiz():
                     print ("hey fuck u buddy eat my ass")
                     return
 
-            input
-G = fuckingHiraganaQuiz()
-G.looperino()
+        
+startBullshit = fuckingHiraganaQuiz()
+startBullshit.looperino()
